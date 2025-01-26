@@ -20,7 +20,7 @@ ICON_NOT_FOUND = '[ICON NOT FOUND: %s]'
 
 def convert(filename: str, max_heading_levels: int):
     mm = freeplane.Mindmap(filename)
-    md = mdutils.MdUtils(file_name='output.md')  # Will not use the file actually.
+    md = mdutils.MdUtils(file_name='dummy.md')  # Will not use the file.
     md.new_list(tree_to_nested_list(md, mm.rootnode, 1, max_heading_levels))
     print(md.get_md_text())    
 
@@ -56,9 +56,14 @@ def main(args: argparse.Namespace):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Convert a Freeplane mindmap to Markdown')
+    parser = argparse.ArgumentParser(
+        description='Convert a Freeplane mindmap to Markdown')
     parser.add_argument('filename', type=str, help='File to convert')
-    parser.add_argument('--max_heading_levels', type=int, default=2, help='Max number of heading levels')
+    parser.add_argument(
+        '--max_heading_levels',
+        type=int,
+        default=2,
+        help='Max number of heading levels')
 
     args = parser.parse_args()
     sys.exit(main(args))
