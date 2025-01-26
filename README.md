@@ -1,6 +1,6 @@
 # freeplane-to-md
 
-Convert Freeplane mind maps to Markdown.
+Convert Freeplane/Freemind mind maps to Markdown.
 
 Will read the file provided and print out Markdown to `STDOUT`.
 
@@ -12,7 +12,8 @@ After that, it will be just plain text and hyperlinks.
 
 # Installation on macOS
 
-I highly recommend using a virtual environment so you only install the dependencies in a local environment, not the global system. \
+I highly recommend using a virtual environment so you only install the
+dependencies in a local environment, not the global system. \
 On Mac, install these binaries:
 
     brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper
@@ -28,3 +29,6 @@ See the included `freeplane_to_md.sh` for a template to use with `pyenv`.
     ./freeplane_to_md.sh file.mm
 
 See `--help` for options.
+
+For larger mind maps, I first export individual branches into separate MM
+files, and then convert those.
