@@ -16,9 +16,18 @@ I highly recommend using a virtual environment so you only install the
 dependencies in a local environment, not the global system.
 
 I'm using `uv` to create a virtual environment and install the dependencies:
+```
+$ uv venv
+$ source .venv/bin/activate
+$ uv pip install -r requirements.txt
+```
 
-    uv venv create
-    uv pip install -r requirements.txt
+I recommend using (direnv)[https://direnv.net/] to automatically activate the
+environment in your shell when entering the directory. Setup for this project:
+```
+$ echo 'export VIRTUAL_ENV=".venv"\nlayout python' > .envrc
+$ direnv allow
+```
 
 # Usage
 
