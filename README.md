@@ -13,20 +13,16 @@ After that, it will be just plain text and hyperlinks.
 # Installation on macOS
 
 I highly recommend using a virtual environment so you only install the
-dependencies in a local environment, not the global system. \
-On Mac, install these binaries:
+dependencies in a local environment, not the global system.
 
-    brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper
+I'm using `uv` to create a virtual environment and install the dependencies:
 
-You'll need to install these dependencies in your environment:
-
-    pip install freeplane-io mdutils
-
-See the included `freeplane_to_md.sh` for a template to use with `pyenv`.
+    uv venv create
+    uv pip install -r requirements.txt
 
 # Usage
 
-    ./freeplane_to_md.sh file.mm
+    ./freeplane_to_md.py file.mm
 
 See `--help` for options.
 
