@@ -1,0 +1,10 @@
+[project]
+name = "freeplane-to-md"
+version = "0.1.0"
+description = "Convert Freeplane/Freemind mind maps to Markdown"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "freeplane-io>=0.10.1",
+    "mdutils>=1.8.0",
+]
